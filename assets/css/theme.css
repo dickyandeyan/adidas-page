@@ -41,5 +41,11 @@ body {
 }
 
 #jumbotron {
-  padding-top: 5em;
+  padding: 5.5em 0;
+}
+#jumbotron .main-banner {
+  min-height: 400px;
+}
+#jumbotron .banner-text {
+  height: 200%;
 }

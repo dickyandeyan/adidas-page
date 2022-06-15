@@ -50,5 +50,9 @@ body {
 }
 
 #jumbotron {
-	padding-top: 5em;
+	padding: 5.5em 0;
+
+	.main-banner {
+		min-height: 400px;
+	}
 }
