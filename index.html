@@ -12,61 +12,105 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top bg-light py-3" id="navbar-custom">
-        <div class="w-100 d-flex justify-content-between">
-            <div class="social-div position-absolute ps-3">
-                <a href="#">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-google-plus-g"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+    <!-- <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar w/ text</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Navbar text with an inline element
+                </span>
             </div>
-            <div class="main-logo text-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_brand_Adidas.png/800px-Logo_brand_Adidas.png" alt="adidas.logo" width="50px" height="50px">
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-light py-3" id="navbar-custom">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <div class="w-100 d-flex justify-content-between">
+                    <div class="social-div position-absolute ps-3">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="main-logo text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_brand_Adidas.png/800px-Logo_brand_Adidas.png" alt="adidas.logo" width="50px" height="50px">
+                    </div>
+                    <ul class="navbar-nav position-absolute pe-3 d-none d-md-flex">
+                        <li class="nav-item active">
+                            <a href="#home" class="nav-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="navbar-nav position-absolute pe-3">
-                <li class="nav-item active">
-                    <a href="#home" class="nav-link">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">
-                        Contact
-                    </a>
-                </li>
-            </ul>
         </div>
     </nav>
     <section id="jumbotron">
         <div class="container-fluid">
-            <div class="main-banner bg-white rounded-4">
+            <div class="main-banner bg-white">
                 <div class="row">
-                    <div class="col-12 col-xl-6">
-                        <div class="p-3 text-dark">
-                            <div class="banner-text d-flex align-items-center" style="height: 400px">
+                    <div class="col-12 col-md-6" id="left-banner">
+                        <div class="p-3 text-dark" id="bg-banner">
+                            <div class="banner-text d-flex align-items-center" style="height: 500px">
                                 <div>
-                                    <h1 class="fw-bold">
+                                    <h1 class="fw-bold text-white">
                                         This is my quote for performance testing
                                     </h1>
-                                    <blockquote>Adina</blockquote>
+                                    <blockquote class="text-white">Adina</blockquote>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-6"></div>
+                    <div class="col-12 col-md-6" id="right-banner">
+                        <div class="slideshow-container">
+                            <div class="myslides fade">
+                                <img src="./assets/image/adidas-1.png" alt="adidas-1.png">
+                            </div>
+                            <div class="myslides fade">
+                                <img src="./assets/image/adidas-2.png" alt="adidas-2.png">
+                            </div>
+                            <div class="myslides fade">
+                                <img src="./assets/image/adidas-3.png" alt="adidas-3.png">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,6 +118,7 @@
     </section>
 
     <script src="./assets/library/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/product-slider.js"></script>
 </body>
 
 </html>

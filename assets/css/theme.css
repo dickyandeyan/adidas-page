@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 body {
-  background-color: #2e2e2e;
   color: #fff;
-  min-height: 200vh;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
@@ -44,8 +43,45 @@ body {
   padding: 5.5em 0;
 }
 #jumbotron .main-banner {
-  min-height: 400px;
+  min-height: 600px;
 }
-#jumbotron .banner-text {
-  height: 200%;
+#jumbotron .main-banner #left-banner #bg-banner {
+  background-image: url(../image/main-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 600px;
 }
+#jumbotron .main-banner #right-banner .slideshow-container {
+  display: flex;
+  place-content: center;
+  min-height: 600px;
+}
+#jumbotron .main-banner #right-banner .myslides {
+  display: flex;
+  align-items: center;
+}
+#jumbotron .main-banner #right-banner .myslides img {
+  width: 300px;
+}
+#jumbotron .main-banner #right-banner .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=theme.css.map */

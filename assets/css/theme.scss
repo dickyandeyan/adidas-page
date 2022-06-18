@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
 
 body {
-	background-color: #2e2e2e;
+	// background-color: #2e2e2e;
 	color: #fff;
-	min-height: 200vh;
+	min-height: 100vh;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -42,7 +42,7 @@ body {
 				&:hover {
 					background-color: #2e2e2e;
 					color: #fff;
-					transition: all .5s ease-out;
+					transition: all 0.5s ease-out;
 				}
 			}
 		}
@@ -53,6 +53,47 @@ body {
 	padding: 5.5em 0;
 
 	.main-banner {
-		min-height: 400px;
+		min-height: 600px;
+
+		#left-banner {
+			#bg-banner {
+				background-image: url(../image/main-bg.jpg);
+				background-size: cover;
+
+				background-repeat: no-repeat;
+				min-height: 600px;
+			}
+		}
+
+		#right-banner {
+			.slideshow-container {
+				display: flex;
+				place-content: center;
+				min-height: 600px;
+			}
+
+			.myslides {
+				display: flex;
+				align-items: center;
+
+				img {
+					width: 300px;
+				}
+			}
+
+			.fade {
+				animation-name: fade;
+				animation-duration: 2s;
+			}
+
+			@keyframes fade {
+				from {
+					opacity: 0.5;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		}
 	}
 }
