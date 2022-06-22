@@ -14,5 +14,5 @@ function showSlides() {
 
 	slides[slideIndex - 1].style.display = 'flex'
 
-	setTimeout(showSlides, 2000) // Change image every 2 seconds
+	setTimeout(showSlides, 5000) // Change image every 2 seconds
 }

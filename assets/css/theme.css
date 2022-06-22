@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 body {
-  color: #fff;
-  min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
+#navbar-custom #mobile-logo {
+  position: fixed;
+  top: 0;
+  padding-top: 0.5em;
+  z-index: -1;
+}
 #navbar-custom .social-div {
   display: flex;
   margin-top: 7px;
@@ -38,50 +42,147 @@ body {
   color: #fff;
   transition: all 0.5s ease-out;
 }
+#navbar-custom #navbarText li {
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
+#navbar-custom #navbarText li a {
+  color: #000;
+}
+#navbar-custom #navbarText li:hover {
+  background-color: #000;
+  color: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+#navbar-custom #navbarText li:hover i {
+  color: #fff;
+}
 
 #jumbotron {
-  padding: 5.5em 0;
-}
-#jumbotron .main-banner {
-  min-height: 600px;
+  padding: 5.5em 0 1em;
 }
 #jumbotron .main-banner #left-banner #bg-banner {
   background-image: url(../image/main-bg.jpg);
   background-size: cover;
+  display: flex;
+  align-items: center;
   background-repeat: no-repeat;
-  min-height: 600px;
+  height: 500px;
+}
+#jumbotron .main-banner #left-banner #bg-banner .banner-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+@media (max-width: 425px) {
+  #jumbotron .main-banner #left-banner #bg-banner .banner-text {
+    text-align: center;
+  }
 }
 #jumbotron .main-banner #right-banner .slideshow-container {
   display: flex;
   place-content: center;
-  min-height: 600px;
+  min-height: 500px;
+  position: relative;
+}
+#jumbotron .main-banner #right-banner .slideshow-container h1 {
+  position: absolute;
+  left: 0;
 }
 #jumbotron .main-banner #right-banner .myslides {
   display: flex;
   align-items: center;
+  width: 400px;
 }
 #jumbotron .main-banner #right-banner .myslides img {
-  width: 300px;
+  width: 100%;
 }
 #jumbotron .main-banner #right-banner .fade {
   -webkit-animation-name: fade;
           animation-name: fade;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 @-webkit-keyframes fade {
-  from {
-    opacity: 0.5;
+  0% {
+    opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0.8;
+  }
+  75% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes fade {
-  from {
-    opacity: 0.5;
+  0% {
+    opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0.8;
+  }
+  75% {
     opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}
+
+#whats-hot {
+  padding-bottom: 3em;
+}
+#whats-hot .whats-hot-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#whats-hot .whats-hot-row .hot-img-container {
+  flex-grow: 1;
+  width: 300px;
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+#whats-hot .whats-hot-row .hot-img-container img {
+  width: 100%;
+}
+#whats-hot .whats-hot-row .hot-img-container:after {
+  content: "";
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #000;
+  transition: all 1s;
+}
+#whats-hot .whats-hot-row .hot-img-container:hover:after {
+  content: attr(data-content);
+  color: #fff;
+  opacity: 0.7;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+footer {
+  color: #fff;
+}
+footer ul {
+  margin: 1em 0;
+}
+footer ul li {
+  margin: 1em;
 }/*# sourceMappingURL=theme.css.map */
